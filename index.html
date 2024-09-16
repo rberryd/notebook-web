@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./img/note-icon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-bars menu-btn" id="openSidebarBtn"></i>
+    </header>
+    <nav class="sidebar-container">
+      <div class="action-container">
+        <h1>Actions</h1>
+        <i class="fa-solid fa-xmark menu-btn" id="closeSidebarBtn"></i>
+      </div>
+      <ul class="action-btn-container">
+        <li>Home</li>
+        <li>Friends</li>
+        <li>Trash</li>
+      </ul>
+      <div class="folder-container">
+        <h1>Folders</h1>
+        <i class="fa-solid fa-plus menu-btn" id="folderCreateBtn"></i>
+      </div>
+      <ul class="folder-btn-container">
+        <li>Coding <span class="note-counter">100 Notes</span></li>
+        <li>Gaming <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
+      </ul>
+    </nav>
+    <div class="popup-container">
+      <div class="folder-creation-menu">
+        <label for="folderName" class="folder-label">
+          Folder Name
+          <i class="fa-solid fa-xmark menu-btn" id="closePopUpBtn"></i>
+        </label>
+        <input type="text" name="folderName" id="folderName" />
+        <button id="folderSubmitBtn">Save</button>
+      </div>
+    </div>
+    <main class="sections" id="homeContainer">
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+      <div class="cube content-box"></div>
+    </main>
+    <section class="sections" id="friendsContainer"></section>
+    <section class="sections" id="trashContainer"></section>
+  </body>
+</html>
