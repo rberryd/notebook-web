@@ -15,7 +15,6 @@
   width: 70%;
   background: rgb(208, 236, 233);
   border: 2px solid transparent;
-  border-radius: 1rem;
   background-clip: content-box;
 }
 
@@ -35,6 +34,9 @@ body {
 header {
   width: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(228, 247, 245);
 }
 
 .action-container,
@@ -48,17 +50,32 @@ header {
   flex: 1;
 }
 
-.active-container {
-  visibility: visible;
+.content-box {
+  height: 250px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.content-box {
-  min-height: 250px;
-  min-width: 250px;
+.content-box:hover {
+  box-shadow: 0 1px 8px rgb(134, 168, 164);
+}
+
+.content-box h2 {
+  text-align: center;
 }
 
 .cube {
   background: rgb(193, 226, 222);
+}
+
+.folder-active {
+  background: rgb(240, 255, 254) !important;
+}
+
+.folder-active:hover {
+  filter: brightness(90%);
 }
 
 .folder-btn-container {
@@ -66,8 +83,19 @@ header {
   overflow-y: auto;
 }
 
-.folder-creation-menu {
+.folder-text {
+  margin-top: 2rem;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+div.inactive {
   display: none;
+}
+
+.pop-up {
+  display: flex;
   flex-direction: column;
   text-align: center;
   gap: 4px;
@@ -77,13 +105,13 @@ header {
   outline: 1px solid;
 }
 
-.folder-creation-menu button {
+.pop-up button {
   background: rgb(208, 236, 233);
   border: 1px solid rgb(0, 57, 80);
   cursor: pointer;
 }
 
-.folder-label {
+.pop-up-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +124,7 @@ header {
   cursor: pointer;
 }
 
-.folder-creation-menu button:active,
+.pop-up button:active,
 .menu-btn:active {
   filter: brightness(90%);
 }
@@ -108,12 +136,11 @@ header {
 .popup-container {
   height: 100vh;
   width: 100%;
-  display: none;
+  display: grid;
   place-items: center;
   position: absolute;
   top: 0;
   z-index: 4;
-  pointer-events: none;
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -126,10 +153,10 @@ header {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  place-items: center;
   gap: 10px;
   position: absolute;
-  padding: 45px 24px;
+  margin-top: 56px;
+  padding: 14px 24px;
   overflow-y: auto;
   inset: 0;
   z-index: -1;
@@ -146,11 +173,13 @@ header {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: rgb(193, 226, 222);
   position: absolute;
   top: 0;
   z-index: 3;
   left: -100%;
+  background: rgb(193, 226, 222);
+  border-right: 2px solid rgb(134, 168, 164);
+  margin-right: -2px;
   transition: 0.1s linear;
   text-align: center;
 }

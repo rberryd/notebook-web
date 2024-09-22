@@ -24,6 +24,7 @@
   <body>
     <header>
       <i class="fa-solid fa-bars menu-btn" id="openSidebarBtn"></i>
+      <i class="fa-solid fa-plus menu-btn" id="newNoteBtn"></i>
     </header>
     <nav class="sidebar-container">
       <div class="action-container">
@@ -39,58 +40,30 @@
         <h1>Folders</h1>
         <i class="fa-solid fa-plus menu-btn" id="folderCreateBtn"></i>
       </div>
-      <ul class="folder-btn-container">
-        <li>Coding <span class="note-counter">100 Notes</span></li>
-        <li>Gaming <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-        <li>Food Recipes <span class="note-counter">100 Notes</span></li>
-      </ul>
+      <ul class="folder-btn-container"></ul>
     </nav>
-    <div class="popup-container">
-      <div class="folder-creation-menu">
-        <label for="folderName" class="folder-label">
+    <div class="popup-container inactive">
+      <div class="folder-creation-menu pop-up inactive">
+        <label for="folder-name" class="pop-up-label">
           Folder Name
-          <i class="fa-solid fa-xmark menu-btn" id="closePopUpBtn"></i>
+          <i class="fa-solid fa-xmark menu-btn" id="closeFolderPopUpBtn"></i>
         </label>
-        <input type="text" name="folderName" id="folderName" />
+        <input type="text" name="folder-name" id="folderName" />
         <button id="folderSubmitBtn">Save</button>
+      </div>
+      <div class="note-view-container pop-up inactive">
+        <label for="note-name" class="pop-up-label">
+          Note Name
+          <i class="fa-solid fa-xmark menu-btn" id="closeNotePopUpBtn"></i>
+        </label>
+        <input type="text" name="note-name" id="noteName" />
+        <label for="note-description">Description</label>
+        <textarea name="note-description" id="noteDesc" rows="4"></textarea>
+        <button id="noteSubmitBtn">Save</button>
       </div>
     </div>
     <main class="sections" id="homeContainer">
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
-      <div class="cube content-box"></div>
+      <h1 class="folder-text">No Current Folder Selected</h1>
     </main>
     <section class="sections" id="friendsContainer"></section>
     <section class="sections" id="trashContainer"></section>
